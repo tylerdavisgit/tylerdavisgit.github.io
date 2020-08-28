@@ -469,6 +469,12 @@ h2 {
     max-width: 100%;
     font-size: 12px;
   }
+  .headerHover {
+    opacity: 1;
+  }
+  #aboutMe img {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -477,9 +483,6 @@ h2 {
   }
   .infoHover {
     background-color: rgba(0, 0, 0, 0.4);
-  }
-  .headerHover {
-    opacity: 1;
   }
 
   #aboutMe h2 {
@@ -503,6 +506,9 @@ h2 {
     margin-top: 20px;
     margin-bottom: -300px;
   }
+  /* #aboutMe img {
+    opacity: 0.5;
+  } */
 }
 
 @media screen and (max-width: 767px) {
