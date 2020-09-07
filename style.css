@@ -297,6 +297,9 @@ h2 {
 }
 
 /* About Me Continue Button */
+#about {
+  margin-bottom: 700px;
+}
 
 #aboutMe a {
   display: flex;
@@ -483,10 +486,6 @@ h2 {
   }
   .infoHover {
     background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  #aboutMe {
-    margin-bottom: 900px;
   }
 
   #aboutMe h2 {
