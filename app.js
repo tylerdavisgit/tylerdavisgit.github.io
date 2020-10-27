@@ -39,14 +39,15 @@ console.log("running after ajax");
 function app(projectsArr) {
   console.log("inside app - projectsArr", projectsArr);
   projectsArr.forEach((project) => {
-    let $projectCard = $(`<div style= "background:url('${project.image}');background-size: cover; background-position: center;border: 3px solid white;height:300px;width:300px; margin: 15px; position:relative;">
+    let $projectCard = $(`<div style= "background:url('${project.image}');background-size: cover; background-position: center;border: 3px solid white;height:300px;width:300px; margin: 15px; margin-bottom: 300px; position:relative;">
                                 <a style = "text-decoration: none; color: rgb(246,246,246);" href = "${project.link}"target ="_blank">
                                 <div class = "infoHover">
                                     <div class = "headerHover">${project.title}</div>
                                     <div class = "hoverDescription">${project.description}</div>
                                 </div>
-                                </a>
-                            </div>`);
+                                </a>                                                        
+                            </div>
+                            `);
     $("#projectsSection").append($projectCard);
   });
 }

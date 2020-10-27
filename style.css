@@ -362,7 +362,6 @@ h2 {
   color: rgb(246, 246, 246);
   border: 2px solid rgb(246, 246, 246);
   padding: 10px;
-  transition: 1s;
   margin-bottom: 40px;
 }
 
@@ -373,45 +372,31 @@ h2 {
 }
 
 /* Project Section Hover Styling */
+
 .infoHover {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 1s ease;
+  /* background-color: rgba(0, 0, 0, 0.5); */
   text-align: center;
-}
-
-.infoHover:hover {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .headerHover {
   line-height: 1;
+  margin-top: 325px;
   position: absolute;
   top: 5%;
   width: 100%;
   font-size: 35px;
-  transition: all 0.5s ease;
-  opacity: 0;
-}
-
-.infoHover:hover > .headerHover {
-  opacity: 1;
 }
 
 .hoverDescription {
   line-height: 1.2;
+  margin-top: 325px;
+
   position: absolute;
   top: 30%;
   width: 100%;
   font-size: 20px;
-  transition: all 0.5s ease;
-  transition-delay: 0.3s;
-  opacity: 0;
-}
-
-.infoHover:hover > .hoverDescription {
-  opacity: 1;
 }
 
 /* Project Section Continue Button */
