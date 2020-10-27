@@ -1,7 +1,3 @@
-console.log($);
-
-console.log("app.js", $);
-
 //sheetUrl is the shared url, anyone can view the google sheet in google
 const sheetUrl =
   "https://docs.google.com/spreadsheets/d/1zj3x6lPobsR6rxsqQAl3NpTuULa8wfeIfHyZxdzh2kk/edit?usp=sharing";
@@ -10,14 +6,11 @@ const sheetUrl =
 const sheetAsJSON =
   "https://spreadsheets.google.com/feeds/list/1zj3x6lPobsR6rxsqQAl3NpTuULa8wfeIfHyZxdzh2kk/od6/public/values?alt=json";
 
-console.log("running before ajax");
-
 //.ajax returns a Promise and a Promise is reolved using .then()
 $.ajax({
   url: sheetAsJSON,
 })
   .then((data) => {
-    console.log("data", data);
     const projects = data.feed.entry.map((project) => {
       return {
         title: project.gsx$title.$t,
@@ -32,12 +25,9 @@ $.ajax({
   //.catch is meant to handle errors
   .catch((err) => console.log("err", err));
 
-console.log("running after ajax");
-
 //data.feed.entry is the array that contains our objects...
 
 function app(projectsArr) {
-  console.log("inside app - projectsArr", projectsArr);
   projectsArr.forEach((project) => {
     let $projectCard = $(`<div style= "background:url('${project.image}');background-size: cover; background-position: center;border: 3px solid white;height:300px;width:300px; margin: 15px; margin-bottom: 300px; position:relative;">
                                 <a style = "text-decoration: none; color: rgb(246,246,246);" href = "${project.link}"target ="_blank">
